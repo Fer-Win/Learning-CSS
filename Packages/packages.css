@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("UbuntuMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "UbuntuMono" ;
+  src: url("UbuntuMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+main{
+  padding-top: 2rem;
+}
+.background{
+  background: url(../Images/plans-background.jpg) center/cover;
+  filter:grayscale(50%);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+
+}
+.package{
+  width: 80%;
+  /* background: #b2fbbb; */
+  border: 4px solid #0e4f1f;
+  border-left: none;
+  margin: 1rem 0;
+  color: black;
+  position: relative;
+  overflow: hidden;
+
+}
+.package:hover,
+.package:active{
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-color: #ff5454;
+  /* border-color: #ff5454!important; */
+  /* border-left: none; */
+  animation: push-up 1s ease-out forwards;
+}
+.package__items{
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  padding: 2rem;
+}
+.package__badge{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  font-size: 0.8rem;
+  color: white;
+  background: #ff5454;
+  padding: 0.5rem;
+  transform: rotate(45deg) translate(3.5rem, -1rem);
+  transform-origin: center;
+  width: 12rem;
+  text-align: center;
+}
+.package__item{
+  color: black;
+  font-size: 20px;
+}
+.package__item__info{
+  color: #979797;
+  font-size: 16px;
+}
+.package__item__description{
+  color: #0e4f1f;
+  background: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #0e4f1f;
+  border-radius: 2px;
+  /* font: 700 1.2rem/2 "UbuntuMono";  */
+  /* font: status-bar; */
+  /* font-weight: 700; */
+  /* line-height: 2; */
+  /* text-decoration: underline  double red; */
+  /* text-shadow: 2px 2px 1px rgb(173, 166, 166); */
+  /* font: italic small-caps 700 1.2rem/2 "UbuntuMono"; */
+/* font-style font-variant font-weight font-size/line-height font-family*/
+}
+.clearfix{
+  clear: both;
+}
+#plus{
+  background-color: rgba(213, 255, 220, 0.95);
+}
+#free{
+  background-color: rgba(234, 252, 237, 0.95);
+  float: right;
+  border-right: none;
+  border-left: 4px solid #0e4f1f;
+  text-align: right;
+}
+#free:hover,
+#free:active{
+  border-left-color: #ff5454;
+}
+#premium{
+  background: rgba(14, 79, 37, 0.95);
+}
+#premium .package__item{
+  color: white;
+}
+#premium .package__item__info{
+  color: #bbb;
+}
+
+@media (min-width: 40rem){
+
+  main {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1500px){
+
+  .package {
+    margin: 3rem auto;
+    border-left:  4px solid #0e4f1f;
+  }
+
+  #free{
+    border-right:  4px solid #0e4f1f;
+  }
+  #free:hover,
+  #free:active{
+    border-right-color: #ff5454;
+}
+}
+
+@keyframes push-up{
+  0%{
+    transform: translateY(0);
+  }
+  33%{
+    transform: translateY(-1.5rem);
+  }
+  100%{
+    transform: translateY(-1rem);
+  }
+}
