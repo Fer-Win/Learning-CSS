@@ -23,7 +23,8 @@ main{
 
 }
 #customer-1:hover .testimonial__image-container,
-#customer-2:hover .testimonial__image-container{
+#customer-2:hover .testimonial__image-container
+{
   animation : flip-customer 1s ease-out forwards;
 }
 .testimonial__image{
